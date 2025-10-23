@@ -62,7 +62,7 @@ showTasks();
 let deleteTask = (title)=>{
   let arrayTasks = JSON.parse(localStorage.getItem('tasks'));
   for (let i = 0; i < arrayTasks.length; i++) {
-     if(arrayTasks[i].title==title){
+     if(arrayTasks[i].title===title){
          arrayTasks.splice(i,1);
      }  
   }
@@ -76,7 +76,7 @@ let deleteTask = (title)=>{
 let editTask = (title)=>{
   let arrayTasks = JSON.parse(localStorage.getItem('tasks'));
   for (let i = 0; i < arrayTasks.length; i++) {
-     if(arrayTasks[i].title==title){
+     if(arrayTasks[i].title===title){
         
       task.value=(arrayTasks[i].title);
       description.value=(arrayTasks[i].description);
@@ -89,6 +89,7 @@ let editTask = (title)=>{
   showTasks();
   
 }
+
 
 
 
